@@ -18,3 +18,7 @@ exports.error = function(ERR){
   console.log("There was an error:\n"+ ERR);
   process.exit(1);
 }
+
+exports.list = function(list){
+  console.log(list + '\n');
+}
