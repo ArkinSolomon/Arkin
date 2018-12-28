@@ -1,0 +1,23 @@
+{
+  "name": "arkin",
+  "version": "1.0.0",
+  "description": "Shortened functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArkinSolomon/Arkin.git"
+  },
+  "keywords": [
+    "Arkin",
+    "Solomon"
+  ],
+  "author": "Arkin Solomon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArkinSolomon/Arkin/issues"
+  },
+  "homepage": "https://github.com/ArkinSolomon/Arkin#readme"
+}
