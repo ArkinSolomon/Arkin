@@ -22,3 +22,26 @@ exports.error = function(ERR){
 exports.list = function(list){
   console.log(list + '\n');
 }
+
+exports.clear = function(){
+  process.stdout.write('\033c');
+}
+
+exports.getDate = function(){
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth()+1; //January is 0!
+  var yyyy = today.getFullYear();
+
+  if(dd<10) {
+      dd = '0'+dd
+  }
+
+  if(mm<10) {
+      mm = '0'+mm
+  }
+
+  today = mm + '/' + dd + '/' + yyyy;
+
+  return today;
+}
