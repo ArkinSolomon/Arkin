@@ -1,6 +1,6 @@
 {
   "name": "arkin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Shortened Node.Js functions",
   "main": "index.js",
   "scripts": {
