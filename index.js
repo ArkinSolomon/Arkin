@@ -13,10 +13,10 @@ function wait(ms){
 exports.question = async function(q){
   var response;
   rl.question(q, (userInput) =>{
-    rl.close;
+    await rl.close();
     wait(150);
     response = userInput;
-
+    return response;
   });
 }
 
