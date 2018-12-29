@@ -5,6 +5,21 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+function wait(ms){
+  var start = new Date().getTime();
+  while(new Date().getTime()<start+ms);
+}
+
+exports.question = function(q){
+  var response;
+  rl.question(q, (userInput) =>{
+    rl.close;
+    wait(150);
+    response = userInput;
+
+  });
+}
+
 exports.sleep = function(delay){
   var start = new Date().getTime();
   while(new Date().getTime()<start+delay);

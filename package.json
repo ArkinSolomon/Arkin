@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/ArkinSolomon/Arkin/issues"
   },
-  "homepage": "https://github.com/ArkinSolomon/Arkin#readme"
+  "homepage": "https://github.com/ArkinSolomon/Arkin#readme",
+  "dependencies": {
+    "readline": "^1.3.0"
+  }
 }
