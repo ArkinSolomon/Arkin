@@ -10,13 +10,14 @@ function wait(ms){
   while(new Date().getTime()<start+ms);
 }
 
-exports.question = async function(q){
+exports.question = function(q){
   var response;
   rl.question(q, (userInput) =>{
-    await rl.close();
-    wait(150);
+    rl.close();
     response = userInput;
-    return response;
+    if (response){
+      return response;
+    }
   });
 }
 
