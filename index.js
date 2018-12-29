@@ -24,7 +24,9 @@ function ask(q){
   });
 }
 
-exports.question = ask(q);
+exports.question = function(q){
+  ask(q);
+}
 
 exports.sleep = function(delay){
   var start = new Date().getTime();
