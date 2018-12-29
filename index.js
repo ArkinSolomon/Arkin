@@ -1,4 +1,5 @@
 const readline = require('readline');
+const async = require('async');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -9,23 +10,32 @@ function wait(ms){
   var start = new Date().getTime();
   while(new Date().getTime()<start+ms);
 }
-
-function ask(q){
-  var response;
-  rl.question(q, (userInput) =>{
-    rl.close();
-    response = userInput;
-    if (response){
-      return response;
-    }else{
-      wait(15);
-      ask(q);
-    }
-  });
-}
+//
+// function ask(q){
+//   var response;
+//   rl.question(q, (userInput) =>{
+//     rl.close();
+//     response = userInput;
+//     if (response){
+//       return response;
+//     }else{
+//       wait(15);
+//       ask(q);
+//     }
+//   });
+// }
 
 exports.question = function(q){
-  ask(q);
+  var response;
+  rl.setPrompt(q);
+  rl.prompt();
+  rl.on('line', (userInput) => {
+    response = userInput;
+    rl.close();
+  });
+  rl.on('close', () => {
+    return response;
+  });
 }
 
 exports.sleep = function(delay){
