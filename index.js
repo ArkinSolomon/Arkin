@@ -10,16 +10,21 @@ function wait(ms){
   while(new Date().getTime()<start+ms);
 }
 
-exports.question = function(q){
+function ask(q){
   var response;
   rl.question(q, (userInput) =>{
     rl.close();
     response = userInput;
     if (response){
       return response;
+    }else{
+      wait(15);
+      ask(q);
     }
   });
 }
+
+exports.question = ask(q);
 
 exports.sleep = function(delay){
   var start = new Date().getTime();
