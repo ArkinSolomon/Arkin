@@ -10,7 +10,7 @@ function wait(ms){
   while(new Date().getTime()<start+ms);
 }
 
-exports.question = function(q){
+exports.question = async function(q){
   var response;
   rl.question(q, (userInput) =>{
     rl.close;
