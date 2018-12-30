@@ -54,15 +54,15 @@ exports.getDate = function(config){
   var yyyy = today.getFullYear();
 
   if(dd < 10) {
-      dd = '0' + dd
+      dd = '0' + dd;
   }
 
   if(mm < 10) {
-      mm = '0'+mm
+      mm = '0'+mm;
   }
 
   if (params.separator === undefined){
-    sep = '/'
+    sep = '/';
   }
 
   var sep = params.separator;
