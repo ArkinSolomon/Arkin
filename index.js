@@ -58,14 +58,14 @@ exports.getDate = function(config){
   }
 
   if(mm < 10) {
-      mm = '0'+mm;
+      mm = '0'+ mm;
   }
 
   if (params.separator === undefined){
     sep = '/';
+  }else{
+    var sep = params.separator;
   }
-
-  var sep = params.separator;
 
   today = mm + sep + dd + sep + yyyy;
 
