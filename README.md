@@ -72,7 +72,7 @@ Ends the program with exit code 1 and logs the error.
 var err = "Uh Oh";
 error(err);
 ```
-*Logs:*
+*Outputs in the console:*
 
 ```
 There was an error:
@@ -91,4 +91,6 @@ Clears the console.
 
 ### Usage
 
+```javascript
+clear();
 ```
