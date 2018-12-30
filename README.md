@@ -3,12 +3,12 @@
 
 # Features
 
-* [Sleep](https://github.com/ArkinSolomon/Arkin#sleep)
-* [End](https://github.com/ArkinSolomon/Arkin#end)
-* [Error](https://github.com/ArkinSolomon/Arkin#error)
-* [Clear](https://github.com/ArkinSolomon/Arkin#clear)
-* [List](https://github.com/ArkinSolomon/Arkin#list)
-* [GetDate](https://github.com/ArkinSolomon/Arkin#getdate)
+* Sleep
+* End
+* Error
+* Clear
+* List
+* Dates
 
 # Installation
 
@@ -35,7 +35,7 @@ Pauses the program for a short time.
 ### Usage
 
 ```javascript
-delay(1000);
+arkin.delay(1000);
 ```
 *Pauses for 1000 milliseconds or 1 second.*
 
@@ -52,7 +52,7 @@ Ends the program with exit code 0.
 ### Usage
 
 ```javascript
-end()
+arkin.end()
 ```
 *Ends the program with exit code 0.*
 
@@ -64,13 +64,13 @@ Ends the program with exit code 1 and logs the error.
 
 ### Parameters
 
-* `ERR` The error that happened.
+* `ERR`: The error that happened.
 
 ### Usage
 
 ```javascript
 var err = "Uh Oh";
-error(err);
+arkin.error(err);
 ```
 *Outputs in the console:*
 
@@ -94,5 +94,38 @@ Clears the console.
 ### Usage
 
 ```javascript
-clear();
+arkin.clear();
+```
+*Clears the console.*
+
+## List
+
+### Information
+
+Takes an array and makes a list from it.
+
+### Parameters
+
+* `list`: An array containing the messages to be displayed.
+* `config`: A JSON object which determines the starting number and marker [Optional].
+ * `startingNumber`: The number which determines the first number of the list. Default: '1'.
+ * `marker`: The separation between the number and the message. Default: '.'.
+
+### Usage
+
+```javascript
+const list = ["YO", "hi", "hello"]
+
+const config = {
+  startingNumber: 1,
+  marker: ')'
+}
+
+arkin.list(list, config);
+```
+*Outputs in the console:*
+```
+1. YO
+2. hi
+3. hello
 ```
