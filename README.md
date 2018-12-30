@@ -109,7 +109,7 @@ Takes an array and makes a list from it.
 * `list`: An array containing the messages to be displayed.
 * `config`: A JSON object which determines the starting number and marker [Optional].
   - `startingNumber`: The number which determines the first number of the list. Default: '1'.
-  - `marker`: The separation between the number and the message. Default: '.'.
+  - `marker`: The separation between the number and the message. Default: '.'
 
 ### Usage
 
