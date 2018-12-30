@@ -1,7 +1,7 @@
 # Arkin
 **Shortened Node.Js Functions**
 
-## Features
+# Features
 
 * Delays
 * End
@@ -10,7 +10,7 @@
 * List
 * Dates
 
-## Installation
+# Installation
 
 To install, open your command line and navigate to your project folder. Then run:
 
