@@ -5,7 +5,7 @@
 
 * [Delays](https://github.com/ArkinSolomon/Arkin#delays)
 * [End](https://github.com/ArkinSolomon/Arkin#end)
-* Error
+* [Error](https://github.com/ArkinSolomon/Arkin#error)
 * Clear
 * List
 * Dates
@@ -15,6 +15,10 @@
 To install, open your command line and navigate to your project folder. Then run:
 
 `npm install arkin`
+
+At the top of your program add:
+
+`const arkin = require('arkin');`
 
 # Reference
 
@@ -30,7 +34,10 @@ Pauses the program for a short time.
 
 ### Usage
 
-`delay(1000)` *Pauses for 1000 milliseconds or 1 second.*
+```javascript
+delay(1000);
+```
+*Pauses for 1000 milliseconds or 1 second.*
 
 ## End
 
@@ -44,7 +51,10 @@ Ends the program with exit code 0.
 
 ### Usage
 
-`end()` *Ends the program with exit code 0.*
+```javascript
+end()
+```
+*Ends the program with exit code 0.*
 
 ## Error
 
@@ -54,9 +64,15 @@ Ends the program with exit code 1 and logs the error.
 
 ### Parameters
 
-* `ERR` *The error that happened*
+* `ERR` The error that happened.
 
 ### Usage
 
-`var err = "Uh Oh"
-error(err)`
+```javascript
+var err = "Uh Oh";
+error(err);
+```
+*Logs:*
+
+> There was an error:
+> Uh Oh
