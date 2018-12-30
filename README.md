@@ -6,9 +6,9 @@
 * [Delays](https://github.com/ArkinSolomon/Arkin#delays)
 * [End](https://github.com/ArkinSolomon/Arkin#end)
 * [Error](https://github.com/ArkinSolomon/Arkin#error)
-* Clear
-* List
-* Dates
+* [Clear](https://github.com/ArkinSolomon/Arkin#clear)
+* [List](https://github.com/ArkinSolomon/Arkin#list)
+* [GetDate](https://github.com/ArkinSolomon/Arkin#getdate)
 
 # Installation
 
@@ -74,5 +74,21 @@ error(err);
 ```
 *Logs:*
 
-> There was an error:
-> Uh Oh
+```
+There was an error:
+Uh Oh
+```
+
+## Clear
+
+### Information
+
+Clears the console.
+
+### Parameters
+
+*None*
+
+### Usage
+
+```
