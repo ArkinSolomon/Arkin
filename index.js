@@ -1,11 +1,3 @@
-const readline = require('readline');
-
-//READLINE
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
 //INTERNAL WAIT FUNCTION
 function wait(ms){
   var start = new Date().getTime();
@@ -17,20 +9,6 @@ function error(ERR){
   console.log("There was an error:\n"+ ERR);
   process.exit(1);
 };
-
-//QUESTION FUNCTION
-exports.question = function(q){
-  var response;
-  rl.setPrompt(q);
-  rl.prompt();
-  rl.on('line', (userInput) => {
-    response = userInput;
-    rl.close();
-  });
-  rl.on('close', () => {
-    return response;
-  });
-}
 
 //EXTERNAL WAIT FUNCTION
 exports.sleep = function(delay){

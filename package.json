@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/ArkinSolomon/Arkin#readme",
   "dependencies": {
-    "async": "^2.6.1",
-    "readline": "^1.3.0"
+    "async": "^2.6.1"
   }
 }
