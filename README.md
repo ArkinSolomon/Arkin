@@ -3,7 +3,7 @@
 
 # Features
 
-* [Delays](https://github.com/ArkinSolomon/Arkin#delays)
+* [Sleep](https://github.com/ArkinSolomon/Arkin#sleep)
 * [End](https://github.com/ArkinSolomon/Arkin#end)
 * [Error](https://github.com/ArkinSolomon/Arkin#error)
 * [Clear](https://github.com/ArkinSolomon/Arkin#clear)
@@ -22,7 +22,7 @@ At the top of your program add:
 
 # Reference
 
-## Delays
+## Sleep
 
 ### Information
 
@@ -84,6 +84,8 @@ Uh Oh
 ### Information
 
 Clears the console.
+
+**NOTE:** This has only been tested on a Mac.
 
 ### Parameters
 
