@@ -47,7 +47,7 @@ exports.clear = function(){
 
 exports.getDate = function(config){
 
-  var params = config;
+  var params = JSON.parse(config);
   var today = new Date();
   var dd = today.getDate();
   var mm = today.getMonth()+1;
@@ -61,11 +61,11 @@ exports.getDate = function(config){
       mm = '0'+mm
   }
 
-  var sep = params.separator;
-
   if (params.separator === undefined){
     sep = '/'
   }
+
+  var sep = params.separator;
 
   today = mm + sep + dd + sep + yyyy;
 
