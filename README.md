@@ -1,4 +1,11 @@
 # Arkin
-Shortened Node.Js Functions
+**Shortened Node.Js Functions**
 
-`test`
+### Features
+
+* Delays
+* End
+* Error
+* Clear
+* List
+* Dates
