@@ -1,5 +1,4 @@
 const readline = require('readline');
-const async = require('async');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -10,20 +9,6 @@ function wait(ms){
   var start = new Date().getTime();
   while(new Date().getTime()<start+ms);
 }
-//
-// function ask(q){
-//   var response;
-//   rl.question(q, (userInput) =>{
-//     rl.close();
-//     response = userInput;
-//     if (response){
-//       return response;
-//     }else{
-//       wait(15);
-//       ask(q);
-//     }
-//   });
-// }
 
 exports.question = function(q){
   var response;
@@ -60,21 +45,28 @@ exports.clear = function(){
   process.stdout.write('\033c');
 }
 
-exports.getDate = function(){
+exports.getDate = function(config){
+
   var today = new Date();
   var dd = today.getDate();
-  var mm = today.getMonth()+1; //January is 0!
+  var mm = today.getMonth()+1;
   var yyyy = today.getFullYear();
 
-  if(dd<10) {
-      dd = '0'+dd
+  if(dd < 10) {
+      dd = '0' + dd
   }
 
-  if(mm<10) {
+  if(mm < 10) {
       mm = '0'+mm
   }
 
-  today = mm + '/' + dd + '/' + yyyy;
+  var sep = config.separator;
+
+  if (!config.separator){
+    sep = '/'
+  }
+
+  today = mm + sep + dd + sep + yyyy;
 
   return today;
 }
