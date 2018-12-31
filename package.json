@@ -1,6 +1,6 @@
 {
   "name": "arkin",
-  "version": "1.0.16",
+  "version": "1.1.0",
   "description": "Just ideas that popped into my head.",
   "main": "index.js",
   "scripts": {
