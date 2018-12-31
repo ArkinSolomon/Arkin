@@ -1,8 +1,8 @@
 # Arkin
 **Just ideas that popped into my head.**
 
-[NPM] https://www.npmjs.com/package/arkin
-[GitHub] https://github.com/ArkinSolomon/Arkin
+  [NPM](https://www.npmjs.com/package/arkin)
+  [GitHub](https://github.com/ArkinSolomon/Arkin)
 
 # Features
 
