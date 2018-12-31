@@ -1,5 +1,8 @@
 # Arkin
-**Shortened Node.Js Functions**
+**Just ideas that popped into my head.**
+
+[NPM] https://www.npmjs.com/package/arkin
+[GitHub] https://github.com/ArkinSolomon/Arkin
 
 # Features
 
@@ -8,7 +11,8 @@
 * Error
 * Clear
 * List
-* Dates
+* GetDate
+* Info
 
 # Installation
 
@@ -72,6 +76,7 @@ Ends the program with exit code 1 and logs the error.
 var err = "Uh Oh";
 arkin.error(err);
 ```
+
 *Outputs in the console:*
 
 ```
@@ -107,25 +112,89 @@ Takes an array and makes a list from it.
 ### Parameters
 
 * `list`: An array containing the messages to be displayed.
-* `config`: A JSON object which determines the starting number and marker [Optional].
-  - `startingNumber`: The number which determines the first number of the list. Default: '1'.
-  - `marker`: The separation between the number and the message. Default: '.'
+* `config`: [Optional] A JSON object which determines the starting number and marker.
+  - `startingNumber`: [Optional] An integer which determines the first number of the list. Default: '1'.
+  - `marker`: [Optional] A string which decides what separates the number and the message. Default: '.'
 
 ### Usage
 
 ```javascript
-const list = ["YO", "hi", "hello"]
+const list = ["Yo", "hi", "hello"]
 
 const config = {
   startingNumber: 1,
   marker: ')'
-}
+};
 
 arkin.list(list, config);
 ```
+
 *Outputs in the console:*
+
 ```
-1. YO
-2. hi
-3. hello
+1) Yo
+2) hi
+3) hello
+```
+
+## GetDate
+
+### Information
+
+Gets the current date in any format.
+
+### Parameters
+
+* `config`: [Optional] A JSON object which determines the information and the way it is returned.
+  - `format`: [Optional] Determines all of the formatting for the date.
+    - `order`: [Optional] A string which specifies the order of the day, month, and year. Separated by hyphens. Default 'month-day-year'.
+    - `extraZero`: [Optional] A boolean which while true, adds an extra zero to the beginning of both the day and month if it is less then ten. Default: 'true'.
+    - `year`: [Optional] A string which determines the length of the year by the amount of 'y's in it. Removes numbers from the left. Default: 'yyyy'.
+    - `separator`: [Optional] A string which determines the separator between the day, month, and year. Default: '/'.
+
+### Usage
+
+*Example date is February 23rd, 2064*
+
+```javascript
+  const config = {
+    format: {
+      order: 'year-month-day',
+      extraZero: false,
+      year: 'yyy',
+      separator: ','
+    }
+  };
+
+  var date = arkin.getDate(config);
+  console.log(date);
+```
+
+*Outputs in the console:*
+
+```
+064,2,23
+```
+
+## Info
+
+### Information
+
+Links to GitHub and NPM.
+
+### Parameters
+
+*None*
+
+### Usage
+
+```javascript
+arkin.info();
+```
+
+*Outputs in the console:*
+
+```
+NPM: https://www.npmjs.com/package/arkin
+GitHub: https://github.com/ArkinSolomon/Arkin
 ```

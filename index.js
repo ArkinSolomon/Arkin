@@ -59,7 +59,7 @@ exports.clear = function(){
   process.stdout.write('\033c');
 }
 
-//DATE FUNCTION
+//GETDATE FUNCTION
 exports.getDate = function(config){
 
   //GETS VARS
@@ -68,29 +68,42 @@ exports.getDate = function(config){
   var mm = today.getMonth() + 1;
   var year = today.getFullYear();
 
+  //SEPERATOR
   var sep;
-  //CHECKS NUMBERS TO MAKE THEM USER FRIENDLY
-  if(dd < 10) {
-      dd = '0' + dd;
-  }
 
-  if(mm < 10) {
-      mm = '0'+ mm;
+  //ADDS AN EXTRA ZERO IF SPECIFIED
+  if (typeof config !== 'undefined'){
+    if (typeof config.format !== 'undefined'){
+      if (config && config.format && config.format.extraZero === true || config && config.format && typeof config.format.extraZero === 'undefined'){
+        if(dd < 10) {
+            dd = '0' + dd;
+        }
+
+        if(mm < 10) {
+            mm = '0'+ mm;
+        }
+      }else if (config && config.format && config.format.extraZero === false) {
+        mm = mm;
+        dd = dd;
+      }else{
+        error("'extraZero' should be either true or false");
+      }
+    }
   }
 
   //CHANGES YEAR FROM INTEGER TO STRING
   year = year.toString();
 
   //CHECKS IF CONFIG DOES NOT EXIST
-  if (!config){
+  if (typeof config === 'undefined'){
     today = mm + '/' + dd + '/' + year;
   }else{
 
     //CHECKS FOR SEPERATOR
-    if (config && typeof config.separator === 'undefined'){
+    if (config && config.format && typeof config.format.separator === 'undefined'){
       sep = '/';
     }else{
-      sep = config.separator;
+      sep = config.format.separator;
     }
 
     //CHECKS FOR FORMAT
@@ -99,6 +112,8 @@ exports.getDate = function(config){
       //CHECKS FOR YEAR FORMATING
       if (config && config.format && typeof config.format.year === 'undefined' || config.format.year == 'yyyy'){
         year = year;
+      }else if (config.format.year == 'y') {
+        year = year.substring(3);
       }else if (config.format.year == 'yy'){
         year = year.substring(2);
       }else if (config.format.year == 'yyy'){
@@ -133,6 +148,11 @@ exports.getDate = function(config){
     }else{
       error("That is not a valid order format")
     }
-  return today;
   }
+  return today;
+}
+
+//LINKS TO GITHUB AND NPM
+exports.info = function(){
+  console.log("NPM: https://www.npmjs.com/package/arkin" + '\n' + "GitHub: https://github.com/ArkinSolomon/Arkin");
 }
