@@ -20,7 +20,5 @@
     "url": "https://github.com/ArkinSolomon/Arkin/issues"
   },
   "homepage": "https://github.com/ArkinSolomon/Arkin#readme",
-  "dependencies": {
-    "async": "^2.6.1"
-  }
+  "dependencies": {}
 }
