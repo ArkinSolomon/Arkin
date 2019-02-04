@@ -6,13 +6,13 @@
 
 # Features
 
-* Sleep
-* End
-* Error
-* Clear
-* List
-* GetDate
-* Info
+* [Sleep](#Sleep)
+* [End](#End)
+* [Error](#Error)
+* [Clear](#Clear)
+* [List](#List)
+* [GetDate](#GetDate)
+* [Info](#Info)
 
 # Installation
 
@@ -84,13 +84,13 @@ There was an error:
 Uh Oh
 ```
 
+*Ends the program with exit code 1.*
+
 ## Clear
 
 ### Information
 
 Clears the console.
-
-**NOTE:** This has only been tested on a Mac.
 
 ### Parameters
 
@@ -114,7 +114,7 @@ Takes an array and makes a list from it.
 * `list`: An array containing the messages to be displayed.
 * `config`: [Optional] A JSON object which determines the starting number and marker.
   - `startingNumber`: [Optional] An integer which determines the first number of the list. Default: '1'.
-  - `marker`: [Optional] A string which decides what separates the number and the message. Default: '.'
+  - `marker`: [Optional] A string which decides what separates the number and the message. Default: '.'.
 
 ### Usage
 
