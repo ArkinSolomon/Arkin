@@ -41,7 +41,7 @@ Pauses the program for a short time.
 ### Usage
 
 ```javascript
-arkin.delay(1000);
+arkin.sleep(1000);
 ```
 *Pauses for 1000 milliseconds or 1 second.*
 
