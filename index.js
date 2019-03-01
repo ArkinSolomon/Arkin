@@ -151,8 +151,3 @@ exports.getDate = function(config){
   }
   return today;
 }
-
-//LINKS TO GITHUB AND NPM
-exports.info = function(){
-  console.log("NPM: https://www.npmjs.com/package/arkin" + '\n' + "GitHub: https://github.com/ArkinSolomon/Arkin");
-}

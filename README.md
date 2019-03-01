@@ -1,7 +1,10 @@
 # Arkin
 **Just ideas that popped into my head.**
 
+![npm](https://img.shields.io/npm/dt/arkin.svg?label=Downloads)
+
   [NPM](https://www.npmjs.com/package/arkin)
+  <br>
   [GitHub](https://github.com/ArkinSolomon/Arkin)
 
 # Features
@@ -12,7 +15,6 @@
 * [Clear](#Clear)
 * [List](#List)
 * [GetDate](#GetDate)
-* [Info](#Info)
 
 # Installation
 
@@ -174,27 +176,4 @@ Gets the current date in any format.
 
 ```
 064,2,23
-```
-
-## Info
-
-### Information
-
-Links to GitHub and NPM.
-
-### Parameters
-
-*None*
-
-### Usage
-
-```javascript
-arkin.info();
-```
-
-*Outputs in the console:*
-
-```
-NPM: https://www.npmjs.com/package/arkin
-GitHub: https://github.com/ArkinSolomon/Arkin
 ```
