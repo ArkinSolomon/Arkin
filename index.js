@@ -151,3 +151,29 @@ exports.getDate = function(config){
   }
   return today;
 }
+
+//TOBOOLEAN FUNCTION
+exports.toBoolean = function(boolIn, toInteger){
+    if (boolIn === 'true' || boolIn === 'false'){
+        if (boolIn === 'true'){
+            return true;
+        }else{
+            return false;
+        }
+    }else if (toInteger){
+        if (boolIn.includes('.' || boolIn.includes(','))){
+            let bool = boolIn.replace(',', '.');
+            let boolFloat = parseFloat(bool);
+            let intString = boolFloat.toString();
+            if (intString.length === boolIn.length){
+                return boolFloat;
+            }else{
+                return boolIn;
+            }
+        }else{
+            return boolIn;
+        }
+    }else{
+        return boolIn;
+    }
+}

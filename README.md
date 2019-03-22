@@ -15,6 +15,7 @@
 * [Clear](#Clear)
 * [List](#List)
 * [GetDate](#GetDate)
+* [ToBoolean](#ToBoolean)
 
 # Installation
 
@@ -176,4 +177,27 @@ Gets the current date in any format.
 
 ```
 064,2,23
+```
+
+## ToBoolean
+
+### Information
+
+Returns a boolean value from a string or returns a float or returns a number
+
+### Parameters
+
+* `boolIn`: A string which contains the value to be returned
+* `toInteger`: [Optional] A boolean value which specifies weather or not to return a float
+
+### Usage
+
+```javascript
+console.log(typeof arkin.toBool('true'), false);
+```
+
+*Outputs in the console:*
+
+```
+boolean
 ```
