@@ -28,29 +28,25 @@ exports.error = function(ERR){
 
 //LIST FUNCTION
 exports.list = function(list, config){
-  //LIST COUNTER
-  var listCounter;
 
-  //ARRAY COUNTER
-  var i = 0;
+  //LIST COUNTER
+  var startingNumber;
 
   //MARKER FOR LISTS
   var marker;
 
   if (typeof config === 'undefined' || typeof config.startingNumber === 'undefined'){
-    listCounter = 1;
+    startingNumber = 1;
   }else{
-    listCounter = config.startingNumber;
+    startingNumber = config.startingNumber;
   }
   if (typeof config === 'undefined' || typeof config.marker === 'undefined'){
     marker = '.';
   }else{
     marker = config.marker;
   }
-  for (listCounter = 1; listCounter <= list.length; listCounter++){
-    let number = listCounter.toString();
-    console.log(number + marker + ' ' + list[i]);
-    i++;
+  for (let listCounter = startingNumber, i = 0; i < list.length; listCounter++, i++){
+    console.log(listCounter.toString() + marker + ' ' + list[i]);
   }
 }
 
